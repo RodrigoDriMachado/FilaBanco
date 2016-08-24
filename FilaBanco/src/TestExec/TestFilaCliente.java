@@ -14,7 +14,6 @@ public class TestFilaCliente {
 	private Cliente clnt3;
 	private Cliente clnt4;
 	private Cliente clnt5;
-	private Atendimento atender;
 	private FilaCliente fila_clnt;
 
 	@Before
@@ -25,7 +24,6 @@ public class TestFilaCliente {
 		clnt4 = new Cliente(75,"Rodrigo");
 		clnt5 = new Cliente(90,"Rodrigo");
 		fila_clnt = new FilaCliente();
-		
 		fila_clnt.addCliente(clnt4);
 		fila_clnt.addCliente(clnt5);
 	}
@@ -36,7 +34,21 @@ public class TestFilaCliente {
 		fila_clnt.addCliente(clnt1);
 		fila_clnt.addCliente(clnt2);
 		fila_clnt.addCliente(clnt3);
-		assertEquals(3, fila_clnt.sizeNormal());
+		assertEquals(2, fila_clnt.sizeNormal());
+    } 
+	
+	@Test
+	public void testSizeNormal(){
+		fila_clnt.cleanFilaNormal();
+		fila_clnt.addCliente(clnt1);
+		fila_clnt.addCliente(clnt2);
+		fila_clnt.addCliente(clnt3);
+		fila_clnt.addCliente(clnt4);
+		fila_clnt.addCliente(clnt5);
+		fila_clnt.removeNormal();
+		fila_clnt.removeNormal();
+		fila_clnt.removeNormal();
+		assertEquals(0, fila_clnt.sizeNormal());
     } 
 	
 	
