@@ -23,7 +23,7 @@ public class App {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Digite a operação que deseja efetuar: ");
+        System.out.println("Digite a operaÃ§Ã£o que deseja efetuar: ");
         System.out.println("1 - Solicitar Proximo Cliente ");
         System.out.println("2 - Registrar Chegada de Cliente ");
         System.out.println("3 - Quantidade de Pessoas nas Filas: ");
@@ -43,7 +43,7 @@ public class App {
                     atende.efetuaAtendimento(numCaixa);
                                
                     System.out.println("");
-                    System.out.println("Digite a operação que deseja efetuar: ");
+                    System.out.println("Digite a operaÃ§Ã£o que deseja efetuar: ");
                     System.out.println("1 - Solicitar Proximo Cliente ");
                     System.out.println("2 - Registrar Chegada de Cliente ");
                     System.out.println("3 - Quantidade de Pessoas nas Filas: ");
@@ -64,7 +64,7 @@ public class App {
                     filaCliente.addCliente(cliente);
                     
                     System.out.println("");
-                    System.out.println("Digite a operação que deseja efetuar: ");
+                    System.out.println("Digite a operaÃ§Ã£o que deseja efetuar: ");
                     System.out.println("1 - Solicitar Proximo Cliente ");
                     System.out.println("2 - Registrar Chegada de Cliente ");
                     System.out.println("3 - Quantidade de Pessoas nas Filas: ");
@@ -77,16 +77,14 @@ public class App {
 
                 case 3:
                 	
-                	System.out.println("Fila atual de atendimento: ");
-                	
-                    System.out.println("Normal: ");
-                    System.out.println(atende.quantidadeNormal());
+                	System.out.println("Neste momento existem " + atende.quantidadeNormal() +
+                			" pessoas aguardando atendimento na fila normal");
+                                        
+                    System.out.println("Neste momento existem " + atende.quantidadePrioritario() + 
+                    		" pessoas aguardando atendimento na fila prioritaria");
                     
-                    System.out.println("Prioritaria: ");
-                    System.out.println(atende.quantidadePrioritario());
-
                     System.out.println("");
-                    System.out.println("Digite a operação que deseja efetuar: ");
+                    System.out.println("Digite a operaÃ§Ã£o que deseja efetuar: ");
                     System.out.println("1 - Solicitar Proximo Cliente ");
                     System.out.println("2 - Registrar Chegada de Cliente ");
                     System.out.println("3 - Quantidade de Pessoas nas Filas: ");
